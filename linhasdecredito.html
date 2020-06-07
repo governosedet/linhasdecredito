@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="pt" class="pleaserotate-showing">
+<script>
+  !function () { function a(a) { var b; for (var b in a) o[b] = a[b] } function b(a) { document.documentElement && (document.documentElement.className = document.documentElement.className.replace(/(?:^|\s)pleaserotate-\S*/g, ""), document.documentElement.className += " pleaserotate-" + a) } function c(a) { var b; for (b = 0; b < p.length; b++)a.insertRule(p[b], 0); for (a.insertRule("#pleaserotate-backdrop { z-index: " + o.zIndex + "}", 0), o.allowClickBypass && a.insertRule("#pleaserotate-backdrop { cursor: pointer }", 0), o.forcePortrait && a.insertRule("#pleaserotate-backdrop { -webkit-transform-origin: 50% }", 0), b = 0; b < q.length; b++)CSSRule.WEBKIT_KEYFRAMES_RULE ? a.insertRule("@-webkit-keyframes " + q[b], 0) : CSSRule.MOZ_KEYFRAMES_RULE ? a.insertRule("@-moz-keyframes " + q[b], 0) : CSSRule.KEYFRAMES_RULE && a.insertRule("@keyframes " + q[b], 0) } function d() { var a = document.createElement("style"); a.appendChild(document.createTextNode("")), document.head.insertBefore(a, document.head.firstChild), c(a.sheet) } function e() { var a = document.createElement("div"), b = document.createElement("div"), c = document.createElement("div"), d = document.createElement("small"); a.setAttribute("id", "pleaserotate-backdrop"), b.setAttribute("id", "pleaserotate-container"), c.setAttribute("id", "pleaserotate-message"), a.appendChild(b), b.appendChild(null !== o.iconNode ? o.iconNode : f()), b.appendChild(c), c.appendChild(document.createTextNode(o.message)), d.appendChild(document.createTextNode(o.subMessage)), c.appendChild(d), document.body.appendChild(a) } function f() { var a = document.createElementNS("http://www.w3.org/2000/svg", "svg"); a.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink"), a.setAttribute("id", "pleaserotate-graphic"), a.setAttribute("viewBox", "0 0 250 250"); var b = document.createElementNS("http://www.w3.org/2000/svg", "g"); b.setAttribute("id", "pleaserotate-graphic-path"), o.forcePortrait && b.setAttribute("transform", "rotate(-90 125 125)"); var c = document.createElementNS("http://www.w3.org/2000/svg", "path"); return c.setAttribute("d", "M190.5,221.3c0,8.3-6.8,15-15,15H80.2c-8.3,0-15-6.8-15-15V28.7c0-8.3,6.8-15,15-15h95.3c8.3,0,15,6.8,15,15V221.3zM74.4,33.5l-0.1,139.2c0,8.3,0,17.9,0,21.5c0,3.6,0,6.9,0,7.3c0,0.5,0.2,0.8,0.4,0.8s7.2,0,15.4,0h75.6c8.3,0,15.1,0,15.2,0s0.2-6.8,0.2-15V33.5c0-2.6-1-5-2.6-6.5c-1.3-1.3-3-2.1-4.9-2.1H81.9c-2.7,0-5,1.6-6.3,4C74.9,30.2,74.4,31.8,74.4,33.5zM127.7,207c-5.4,0-9.8,5.1-9.8,11.3s4.4,11.3,9.8,11.3s9.8-5.1,9.8-11.3S133.2,207,127.7,207z"), a.appendChild(b), b.appendChild(c), a } function g(a) { var b = document.getElementById("pleaserotate-backdrop"); a ? b && (b.style.display = "block") : b && (b.style.display = "none") } function h() { var a, c = l && !o.forcePortrait || !l && o.forcePortrait; c ? (a = o.onShow(), b("showing")) : (a = o.onHide(), b("hiding")), (void 0 === a || a) && (k.Showing = c, g(c)) } function i() { return window.innerWidth < 600 } function j() { return !m && o.onlyMobile ? void (n || (n = !0, g(!1), b("hiding"), o.onHide())) : void (l !== i() && (l = i(), h())) } var k = {}, l = null, m = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent), n = !1, o = { startOnPageLoad: !0, onHide: function () { }, onShow: function () { }, forcePortrait: !1, message: "Esse site é melhor visualizado com o dispositivo na posição horizontal", subMessage: "", allowClickBypass: !1, onlyMobile: !0, zIndex: 1e3, iconNode: null }, p = ["#pleaserotate-graphic { margin-left: 50px; width: 200px; animation: pleaserotateframes ease 2s; animation-iteration-count: infinite; transform-origin: 50% 50%; -webkit-animation: pleaserotateframes ease 2s; -webkit-animation-iteration-count: infinite; -webkit-transform-origin: 50% 50%; -moz-animation: pleaserotateframes ease 2s; -moz-animation-iteration-count: infinite; -moz-transform-origin: 50% 50%; -ms-animation: pleaserotateframes ease 2s; -ms-animation-iteration-count: infinite; -ms-transform-origin: 50% 50%; }", "#pleaserotate-backdrop { background-color: white; top: 0; left: 0; position: fixed; width: 100%; height: 100%; }", "#pleaserotate-container { width: 300px; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); }", "#pleaserotate-message { margin-top: 20px; font-size: 1.3em; text-align: center; font-family: Verdana, Geneva, sans-serif; text-transform: uppercase }", "#pleaserotate-message small { opacity: .5; display: block; font-size: .6em}"], q = ["pleaserotateframes{ 0% { transform:  rotate(0deg) ; -moz-transform:  rotate(0deg) ;-webkit-transform:  rotate(0deg) ;-ms-transform:  rotate(0deg) ;} 49% { transform:  rotate(-90deg) ;-moz-transform:  rotate(-90deg) ;-webkit-transform:  rotate(-90deg) ; -ms-transform:  rotate(-90deg) ;  } 100% { transform:  rotate(-90deg) ;-moz-transform:  rotate(-90deg) ;-webkit-transform:  rotate(-90deg) ; -ms-transform:  rotate(-90deg) ;  } }"]; k.start = function (c) { return document.body ? (c && a(c), d(), e(), j(), window.addEventListener("resize", j, !1), void (o.allowClickBypass && document.getElementById("pleaserotate-backdrop").addEventListener("click", function () { var a = o.onHide(); b("hiding"), k.Showing = !1, (void 0 === a || a) && g(!1) }))) : void window.addEventListener("load", k.start.bind(null, c), !1) }, k.stop = function () { window.removeEventListener("resize", onWindowResize, !1) }, k.onShow = function (a) { o.onShow = a, n && (n = !1, l = null, j()) }, k.onHide = function (a) { o.onHide = a, n && (l = null, n = !1, j()) }, k.Showing = !1, "function" == typeof define && define.amd ? (b("initialized"), define(["PleaseRotate"], function () { return k })) : "object" == typeof exports ? (b("initialized"), module.exports = k) : (b("initialized"), window.PleaseRotate = k, a(window.PleaseRotateOptions), o.startOnPageLoad && k.start()) }();
+  var PleaseRotateOptions = {
+    startOnPageLoad: true,
+    onHide: function () { },
+    onShow: function () { },
+    forcePortrait: false,
+    message: "Esse site é melhor visualizado com o dispositivo na posição horizontal",
+    subMessage: "",
+    allowClickBypass: false,
+    onlyMobile: true,
+    zIndex: 1000,
+    iconNode: null
+  };
+</script>
+<head>
+  <title>ADECE - LINHAS DE FINANCIAMENTO</title>
+  <meta charset="utf-8">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+  <link rel="shortcut icon" href="https://www.adece.ce.gov.br/wp-content/themes/ceara2017/favicon.ico"
+    type="image/x-png" />
+  <link rel="shortcut icon" href="https://www.adece.ce.gov.br/wp-content/themes/ceara2017/favicon.ico"
+    type="image/x-icon">
+  <link rel="icon" href="https://www.adece.ce.gov.br/wp-content/themes/ceara2017/favicon.ico" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel='stylesheet' id='wp-block-library-css'
+    href='https://www.adece.ce.gov.br/wp-includes/css/dist/block-library/style.css?ver=5.0.6' type='text/css'
+    media='all' />
+  <link rel='stylesheet' id='tablepress-default-css'
+    href='https://www.adece.ce.gov.br/wp-content/plugins/tablepress/css/default.css?ver=1.9.2' type='text/css'
+    media='all' />
+  <link rel='stylesheet' id='dashicons-css' href='https://www.adece.ce.gov.br/wp-includes/css/dashicons.css?ver=5.0.6'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='thickbox-css'
+    href='https://www.adece.ce.gov.br/wp-includes/js/thickbox/thickbox.css?ver=5.0.6' type='text/css' media='all' />
+  <link rel='stylesheet' id='keyboard_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/Keyboard-master/css/keyboard.css?1563284672&#038;ver=1563284672'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='modestgrid_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/css/lib/modestgrid.css?1563285242&#038;ver=1563285242'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='header_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/css/header.css?1563284649&#038;ver=1563284649'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='menumobile_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/css/menumobile.css?1563284650&#038;ver=1563284650'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='base_css-css' href='assets/css/main.css?1563284649&#038;ver=1563284649' type='text/css'
+    media='all' />
+  <link rel='stylesheet' id='slick_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/css/lib/slick.css?1563285242&#038;ver=1563285242'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='fontawesome-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/libs/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css?1564489867&#038;ver=1564489867'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='hover-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/libs/hover/css/hover.min.css?1563285583&#038;ver=1563285583'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='cc-bootstrap-wrapper-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/libs/cc-bootstrap/css/cc-bootstrap.min.css?1569333651&#038;ver=1569333651'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='custom_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/style.css?1569334742&#038;ver=1569334742'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='sitefilho_css-css'
+    href='https://www.adece.ce.gov.br/wp-content/themes/ceara2017/assets/css/sitefilho.css?1563284650&#038;ver=1563284650'
+    type='text/css' media='all' />
+  <link rel='stylesheet' id='ceara_select2_site_style-css'
+    href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css?ver=5.0.6' type='text/css'
+    media='all' />
+  <link rel='https://api.w.org/' href='https://www.adece.ce.gov.br/wp-json/' />
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.adece.ce.gov.br/xmlrpc.php?rsd" />
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+    href="https://www.adece.ce.gov.br/wp-includes/wlwmanifest.xml" />
+  <link rel='shortlink' href='https://www.adece.ce.gov.br/' />
+  <link rel="alternate" type="application/json+oembed"
+    href="https://www.adece.ce.gov.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.adece.ce.gov.br%2F" />
+  <link rel="alternate" type="text/xml+oembed"
+    href="https://www.adece.ce.gov.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.adece.ce.gov.br%2F&#038;format=xml" />
+  <style>
+    .site-filho #destaque1 figcaption {
+      border-bottom: none;
+      margin-bottom: 15px;
+    }
+    .HeaderPrincipal h1 img {
+      height: 60px;
+      margin-left: 8px;
+      margin-top: 5px;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
+      letter-spacing: 0px;
+    }
+    .UltimasNoticias>h2 {
+      font-family: "OpenSans-ExtraBold", Helvetica, Arial, sans-serif;
+    }
+    .SinglePage .Calendario h2,
+    .site-filho .Calendario h2 {
+      font: 1.6em "OpenSans-Semibold", Helvetica, Arial, sans-serif;
+    }
+    footer .Infos .NomeSite .link-gov h2 {
+      font: 1.2em "OpenSans-Semibold", Helvetica, Arial, sans-serif;
+      color: #485156;
+      text-transform: uppercase;
+    }
+    .-whitebg .MenuPages {
+      -webkit-box-shadow: 0 0px 25px 0px rgba(0, 0, 0, 0.5) !important;
+      box-shadow: 0 0px 25px 0px rgba(0, 0, 0, 0.5) !important;
+    }
+    .sidebar-7-cearas .subtitulo.data {
+      color: #bbb;
+      font: 1.4em "OpenSans-Bold", Helvetica, Arial, sans-serif;
+    }
+    .sidebar-7-cearas a {
+      font: 1.4em "OpenSans-Bold", Helvetica, Arial, sans-serif;
+
+    }
+    .sidebar-7-cearas p {
+      font: 1.2em/20px "OpenSans-Regular", Helvetica, Arial, sans-serif;
+    }
+    body>footer>div>div.row.Infos>div.dt-10.Direitos>div:nth-child(2)>div {
+      display: none;
+    }
+    .texto-institucional .destacado {
+      position: relative;
+      padding: 0 0 2px 8px;
+      background: url(https://ww3.gabgov.ce.gov.br/wp-content/uploads/sites/2/2017/08/borda-destaque.jpg) no-repeat 0 4px;
+      border: none !important;
+    }
+    .SinglePage .MenuPages .logo,
+    .site-filho .MenuPages .logo {
+      margin-top: 6px;
+    }
+    .SinglePage .menu-item-25837 .sub-menu li:first-child {
+      margin-left: -500px;
+    }
+    .SinglePage .menu-item-25843 .sub-menu li:first-child {
+      margin-left: -300px;
+    }
+    .SinglePage .menu-item-25865 .sub-menu li:first-child {
+      margin-left: -104px;
+    }
+    .SinglePage .menu-item-25864 .sub-menu li:first-child {
+      margin-left: 122px;
+    }
+    .SinglePage .menu-item-25882 .sub-menu li:first-child {
+      margin-left: 323px;
+    }
+    .listagem-servidores .grid-servidores .item {
+      display: block;
+      width: calc(20% - 60px);
+      margin: 0 29px;
+      margin-bottom: 20px;
+      float: left;
+    }
+    .listagem-servidores .grid-servidores .item figcaption p {
+      line-height: 1.5em;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #ccc;
+      height: 43px;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+    }
+    #destaque1 .info h4,
+    #destaque2 .info h4 {
+      font-size: 16px;
+    }
+    .site-filho #destaque2 figure {
+      min-height: 475px;
+    }
+    .descricaoPessoal {
+
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    #destaque1 {
+      border-bottom: solid 1px #bbb;
+      margin-bottom: 40px !important;
+      margin-top: 5px;
+    }
+    .sidebar h4.-laranja strong {
+      font-size: 16px !important;
+    }
+    .todas-noticias h2 {
+      display: none;
+    }
+    .SinglePage .SistemasExternos table tbody td.laranja span {
+      display: block;
+      margin: 0 0 8px 0;
+    }
+    .texto-institucional ul li {
+      font: 1.4em "OpenSans-Regular", Helvetica, Arial, sans-serif;
+      line-height: 1.6em;
+      list-style-type: disc;
+      margin: 0 0 0 20px;
+    }
+    #pleaserotate-graphic {
+      fill: #fff;
+    }
+    #pleaserotate-backdrop {
+      color: #fff;
+      background-color: rgb(1, 83, 26);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="0">
+  <body data-rsssl=1
+    class="home page-template page-template-pagina-lista-filhas page-template-pagina-lista-filhas-php page page-id-121 page-parent site-filho"
+    data-ajaxurl="https://www.adece.ce.gov.br/wp-admin/admin-ajax.php">
+    <header class=" main-header BgVerdeGrad ">
+      <div class=" wrapper ">
+        <div class="DifTop">
+          <div class="HeaderPrincipal tl-8 ">
+            <a href="https://www.adece.ce.gov.br">
+              <h5>
+                <img height="20px" src="https://www.adece.ce.gov.br/wp-content/uploads/sites/98/2019/04/clara-adece.png"
+                  alt="Logotipo ADECE" />
+              </h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    </main>
+    <div class="Overlay"></div>
+    <br><br>
+    <div id="linhas_financiamento" class="container-fluid text-center">
+     <div class="card-header card_logo" style="background-color: #fc6836; color: #ffffff;">
+        <h4>ENCONTRE A LINHA DE CRÉDITO PARA AJUDAR O SEU NEGÓCIO</h4>
+      </div>
+      <div class="card bg-warning mein">
+        <div class="card-body text-center dg_pad" style="background-color: rgb(245, 243, 243);">
+          <p style=" font-size: large; text-align: justify; padding: 1%;"> A Sedet em parceria com a ADECE buscou no
+            mercado as linhas de crédito
+            disponíveis para ajudar a sua empresa a atravessar a crise que estamos vivendo. Sabemos que às vezes é
+            dificil encontrar a melhor linha de crédito que se adeque à realidade do seu negócio,
+            por isso, buscamos junto às grandes instituições financeiras, agências de crédito e de fomento, as opções
+            disponíveis para facilitar a sua busca. </p>
+          <div class="card-footer text-muted" style="font-size: x-small;">
+            O Governo do Estado do Ceará não cria, edita ou altera o conteúdo exibido. Todo o processo
+            de coleta de dados cujo resultado culmina nas informações a seguir é realizado automaticamente, através de
+            fontes públicas. Portanto, o Governo do Estado não substitui as fontes originárias da informação, não
+            garante a veracidade dos dados nem que eles estejam atualizados.
+          </div>
+        </div>
+      </div>
+      <div class=" thumbnail">
+
+        <style type="text/css">
+          #table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid rgb(143, 143, 143);
+            margin-top: 20px;
+            vertical-align: center;
+          }
+          #table th,
+          #table td {
+            text-align: center;
+
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-right: solid 1px rgb(143, 143, 143);
+            border-left: solid 1px rgb(143, 143, 143);
+            border-top: solid 1px rgb(143, 143, 143);
+            vertical-align: center;
+          }
+          .tabela_dg {
+            border: none;
+            border-top: none;
+            border-bottom: none;
+            padding-top: 15px;
+            background: none;
+          }
+
+          .tabela_dg3 {
+            border: none;
+            padding: 0;
+            background: none;
+          }
+
+          .dg_img {
+            height: 30px;
+            vertical-align: middle;
+          }
+
+          .dg_link {
+            font-size: 12px;
+            color: blue;
+          }
+
+          .dg_tel {
+            font-size: 12px;
+            color: orangered;
+          }
+
+          .dg_pad {
+            padding: 10px;
+          }
+
+          .mein {
+            vertical-align: middle;
+          }
+
+          .tabela_dg2 {
+            font-size: 12px;
+            background-color: orange;
+
+          }
+
+          button:focus {
+            background: red;
+          }
+
+          .dg_obj {
+            padding: 5px;
+          }
+
+          .card_logo {
+            background-color: beige;
+            color: blue;
+          }
+
+
+          #table tr {
+            border-bottom: 0px solid rgb(143, 143, 143);
+            border-right: 0px solid rgb(143, 143, 143);
+            vertical-align: center;
+          }
+
+          #table tr.header,
+          #table tr:hover {
+            background-color: #a7d3bcb4;
+          }
+
+          .card-text {
+            font-size: 12px;
+          }
+
+          .phantom {
+            display: none;
+            border-top: none;
+            border-bottom: none;
+          }
+
+          .dg_just {
+            text-align: justify;
+            padding-left: 3%;
+          }
+
+          .bg-warning {
+            background-color: whitesmoke;
+            color: rgb(27, 27, 27);
+          }
+        </style>
+
+        <div class="btn-group">
+          <button type="button" class="btn dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" id="deviceSelector" text style="font-size:16px">O QUE VOCÊ DESEJA
+            FINANCIAR?</button>
+          <div class="dropdown-menu dropdown-menu-center">
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                ADEQUAÇÃO FABRIL
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                ANTECIPAÇÃO DE RECURSOS
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                AQUISIÇÃO DE BENS OU INSUMOS
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                CAPACITAÇÃO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                CAPITAL DE GIRO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                CONSTRUÇÃO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                DESPESAS DIVERSAS
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                ENERGIA RENOVÁVEL
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                ESTOQUE
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                EXPANSÃO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                IMPLANTAÇÃO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                IMPOSTOS
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                INFRAESTRUTURA
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                MODERNIZAÇÃO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                PAGAMENTO DE FORNECEDORES
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                PROJETOS DE INOVAÇÃO OU USO <br>SUSTENTÁVEL DE RECURSOS
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                PROJETOS OU ATIVIDADES RELACIONADAS<br> À SAÚDE E/OU COVID-19
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                REFORMA
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                RELOCALIZAÇÃO
+              </text>
+            </a>
+            <a class="dropdown-item" href="javascript:void(0)"
+              onclick="collapseAll(); searchTableDevice(this.innerHTML)">
+              <text style="font-size:16px">
+                SALÁRIOS
+              </text>
+            </a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)" onclick="collapseAll(); searchTableDevice('todos')">
+              <text style="font-size:16px">
+                <b>EXIBIR TODAS AS OPÇÕES</b>
+              </text>
+            </a>
+          </div>
+        </div>
+        <table id="table" class="table-striped table-hover">
+          <tr class="header">
+            <th style="width:20%;">
+              <p style="font-size:14px; font-weight: bold;" style="font-family:verdana">BANCO</p>
+            </th>
+            <th style="width:20%;">
+              <p style="font-size:14px; font-weight: bold;" style="font-family:verdana">ALTERNATIVA</p>
+            </th>
+            <th style="width:35%;">
+              <p style="font-size:14px; font-weight: bold;">OBJETO DO FINANCIAMENTO
+            </th>
+            </p>
+            <th style="width:25%;">
+              <p style="font-size:14px; font-weight: bold;; text-align:center">DETALHES</p>
+            </th>
+            <th style="display: none;">
+              <p style="font-size:14px; font-weight: bold;; text-align:center">CARDS</p>
+            </th>
+
+          </tr>
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">FNE Emergencial - CAPITAL DE GIRO</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, ESTOQUE, DESPESAS DIVERSAS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG1" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>FNE Emergencial </h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até R$ 100 mil<br><b>JUROS:</b> 2,5%
+                        a.a.<br><b>PRAZO:</b> Até 24 meses<br><b>CARÊNCIA:</b> Até 31/12/2020<br><b>REQUISITOS:</b>
+                        Consultar banco para maiores informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Podem ser financiadas todas as despesas de
+                        custeio, manutenção e formação de estoques, inclusive salários e despesas diversas com risco de
+                        não serem honradas em decorrência da redução ou paraliação da atividade
+                        produtiva<br><b>PÚBLICO:</b> CONSULTAR BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">FNE Emergencial - INVESTIMENTO + CAPITAL DE GIRO</td>
+            <td class="dg_obj mein">PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE E/OU COVID-19</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG2" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>FNE Emergencial </h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até R$ 200 mil<br><b>JUROS:</b> 2,5%
+                        a.a.<br><b>PRAZO:</b> Até 24 meses<br><b>CARÊNCIA:</b> Até 31/12/2020<br><b>REQUISITOS:</b>
+                        Possibilidade de apresentação de garantias fidejussória de até R$ 100 mil<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Podem ser financiados itens destinados ao
+                        enfrentamento da calamidade provocada pelos efeitos do Covid-19<br><b>PÚBLICO:</b> CONSULTAR
+                        BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 3-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CREDIAMIGO - Giro solidário</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG3" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG3" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CREDIAMIGO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 100,00 a
+                        R$ 21 mil
+                        para grupos solidários<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> 2 a 12
+                        meses<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b> Garantia de grupo solidário formado por
+                        3 até 10 pessoas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Capital de giro para a aquisição de matéria-prima
+                        e mercadorias<br><b>PÚBLICO:</b> CONSULTAR BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 4-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CREDIAMIGO - Giro individual</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG4" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CREDIAMIGO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 300,00 até
+                        R$ 21 mil<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> 2 a 12 meses<br><b>CARÊNCIA:</b> Sem
+                        carência<br><b>REQUISITOS:</b> Nesta modalidade, você precisa ter negócio próprio estabelecido
+                        há pelo menos 6 meses, com funcionamento e atividade regulares<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Capital de giro para aquisição de matéria-prima e
+                        mercadorias, com garantia do coobrigado<br><b>PÚBLICO:</b> CONSULTAR BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 5-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CREDIAMIGO - Investimento fixo</td>
+            <td class="dg_obj mein">AQUISIÇÃO DE BENS OU INSUMOS, REFORMA</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG5" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG5" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CREDIAMIGO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 300,00
+                        até R$ 21 mil<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> 2 a 24 meses<br><b>CARÊNCIA:</b>
+                        Variável<br><b>REQUISITOS:</b> Consultar banco para maiores informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Crédito para investimento fixo como: aquisição ou
+                        reforma de móveis, utensílios, máquinas e equipamentos, reformas e assistência técnica de
+                        instalações físicas, compra de veículos carros e motos, dentre outros<br><b>PÚBLICO:</b>
+                        CONSULTAR BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 6-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CREDIAMIGO - Crediamigo comunidade</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, INFRAESTRUTURA, AQUISIÇÃO DE BENS OU INSUMOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG6" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG6" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CREDIAMIGO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 100,00 até
+                        R$ 1.100,00<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> 4 a 12 meses<br><b>CARÊNCIA:</b>
+                        Variável<br><b>REQUISITOS:</b> Garantia de grupo solidário formado por 11 até 30 pessoas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Capital de giro produtivo, voltado para a melhoria
+                        da infraestrutura local do seu negócio ou moradia e aquisição de pequenas
+                        ferramentas<br><b>PÚBLICO:</b> Nesta modalidade, até 20% dos integrantes do Banco da Comunidade
+                        podem estar iniciando sua atividade produtiva<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 7-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CREDIAMIGO - Crediamigo mais</td>
+            <td class="dg_obj mein">AQUISIÇÃO DE BENS OU INSUMOS, REFORMA, CAPACITAÇÃO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG7" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG7" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CREDIAMIGO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 1.000,00
+                        até R$ 21 mil<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> 2 a 24 meses<br><b>CARÊNCIA:</b> até 6
+                        meses<br><b>REQUISITOS:</b> Nesta modalidade, você precisa ter pelo menos 12 meses de
+                        experiência no Crediamigo e ser formalizado (possuir CNPJ)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Crédito para investimento fixo e capacitação, com
+                        garantia do coobrigado. Pode ser utilizado para a compra de máquinas e equipamentos novos ou
+                        usados, reformas e assistência técnica de instalações físicas, além de pagamento de cursos de
+                        capacitação, educação formal e consultoria gerencial para o dono da empresa ou empregados do
+                        empreendimento<br><b>PÚBLICO:</b> CONSULTAR BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/crediamigo/credito">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 8-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro Antecipação de Recursos</td>
+            <td class="dg_obj mein">ANTECIPAÇÃO DE RECURSOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG8" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG8" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até 15% do valor do imposto de renda devido no mês da
+                        realização do empréstimo ou, quando for o caso, até 15% do valor do imposto a ser recolhido
+                        antecipadamente.<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> Variável<br><b>CARÊNCIA:</b> Até 90
+                        dias<br><b>REQUISITOS:</b> Conforme o art. 19 da Lei n° 8.167 de 16/01/1991: garantia
+                        fidejussória (fiança ou aval)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Empréstimo para antecipar recursos próprios
+                        necessários à constituição de depósito vinculado, no Banco do Nordeste, por parte das empresas
+                        que tiverem optado pelos benefícios do art. 19 da Lei n° 8.167 de 16/01/1991<br><b>PÚBLICO:</b>
+                        Pessoas jurídicas de todos os portes com empreendimento em operação na área de atuação da SUDENE
+                        e que optarem, nos períodos de apuração, pelos incentivos do art. 19 da Lei nº 8.167 de
+                        16/01/1991, para reinvestimento de 30%(trinta por cento) do imposto devido, em projetos de
+                        modernização ou complementação de equipamento, até o ano de 2018<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/capital-giro">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 9-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - MPE Capital de Giro</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG9" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG9" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> A partir de R$ 1.000,00 até a capacidade de pagamento
+                        da empresa<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> Até 1.080 dias<br><b>CARÊNCIA:</b> Sem
+                        carência<br><b>REQUISITOS:</b> As garantias serão, cumulativa ou alternativamente - garantia
+                        fidejussória (fiança ou aval), fundo de liquidez e hipoteca<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> cobrir eventuais déficits de caixa das
+                        microempresas e empresas de pequeno porte e cooperativas classificadas como do Grupo
+                        I<br><b>PÚBLICO:</b> i) Empresas (empresários registrados na junta comercial e pessoas
+                        jurídicas) que se classifiquem como microempresas ou empresas de pequeno porte, para aplicação
+                        de Recursos Internos(Recin), ou seja, com receita operacional bruta anual ou anualizada até R$
+                        4,8 milhões; ii) Cooperativas classificadas como do Grupo I ( quando o quadro social ativo for
+                        composto por, no mínimo, 70% de pequenas e microempresas)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/capital-giro">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 10-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro simples</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG10" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG10" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> A partir de R$ 1.000,00 até a capacidade de pagamento
+                        da empresa<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> Até 1.460 dias<br><b>CARÊNCIA:</b> Sem
+                        carência ou 552 dias (depende da nota)<br><b>REQUISITOS:</b> As garantias serão, cumulativa ou
+                        alternativamente - garantia fidejussória (fiança ou aval), fundo de liquidez e hipoteca<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Empréstimo para cobrir eventuais déficits de caixa
+                        das empresas que se classifiquem como média ou grande porte, para aplicação de Recursos Internos
+                        (Recin), ou seja, com receita operacional bruta anual ou anualizada acima de R$ 4,8 milhões e
+                        cooperativas classificadas como do Grupo II<br><b>PÚBLICO:</b> Médias e Grandes Empresas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/capital-giro">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 11-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro Associado</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, EXPANSÃO, RELOCALIZAÇÃO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG11" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG11" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até o valor apurado na proposta ou projeto como
+                        necessidade de capital de giro associado<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> Até 1.460
+                        dias<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b> As garantias serão, cumulativa ou
+                        alternativamente - garantia fidejussória (fiança ou aval), fundo de liquidez e hipoteca<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> financiamento para atender a necessidade de
+                        capital de giro nos casos de expansão, modernização, reforma ou relocalização de empreendimentos
+                        econômicos, conforme apurado nos projetos ou propostas apresentados ao Banco do Nordeste, para
+                        fins de financiar o respectivo empreendimento<br><b>PÚBLICO:</b> Empresas que se classifiquem
+                        como média ou grande porte, para aplicação de Recursos Internos (Recin), ou seja, com receita
+                        operacional bruta anual ou anualizada acima de R$ 4,8 milhões e cooperativas classificadas como
+                        do Grupo II<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/capital-giro">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 12-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro Especial</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG12" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG12" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Não há liminte mínimo nem máximo<br><b>JUROS:</b>
+                        Variável<br><b>PRAZO:</b> Até 48 meses<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b> Para a
+                        disponibilização do crédito, é necessário que a empresa não esteja em fase de implantação, tenha
+                        obtido nota de risco igual ou superior a 8,5 na avaliação de risco-cliente e necessite de forma
+                        de reembolso diferenciada<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Empréstimo para cobrir eventuais déficits de caixa
+                        de empresas que atuem nos ramos agroindustrial, industrial, comercial, de turismo ou de
+                        prestação de serviços<br><b>PÚBLICO:</b> Empresas que atuem nos ramos agroindustrial,
+                        industrial, comercial, de turismo ou de prestação de serviços, que se classifiquem como média ou
+                        grande porte, para aplicação de Recursos Internos(Recin), ou seja, com receita operacional bruta
+                        anual ou anualizada acima de R$ 4,8 milhões<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/capital-giro">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 13-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro BNB Digital</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, AQUISIÇÃO DE BENS OU INSUMOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG13" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG13" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Conforme regras próprias do produto<br><b>JUROS:</b>
+                        Variável<br><b>PRAZO:</b> Até 6 meses<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b>
+                        Atender, cumulativamente, as seguintes condições para obter limite de crédito:
+                        a) Seja indicada pela empresa atacadista para fazer parte do público-alvo do acordo operacional;
+                        b) Esteja funcionando e com faturamento há mais de 12 meses;
+                        c) Seja correntista na agência de relacionamento;
+                        d) Tenha conceito risco cliente AA ou A*;
+                        e) Não faça parte do mesmo grupo econômico da empresa atacadista de mercadorias, matérias-primas
+                        e/ou insumos;
+                        f) Não ser microempreendedor individual.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Favorecer a aquisição, à vista, de mercadorias,
+                        matérias-primas e/ou insumos pelas empresas compradoras às empresas atacadistas, objetivando a
+                        redução dos preços dos produtos para o consumidor em geral.<br><b>PÚBLICO:</b> Empresas
+                        privadas, compradoras de mercadorias, matérias-primas e/ou insumos a empresas atacadistas
+                        localizadas na área de atuação da Sudene<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/capital-giro">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 14-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro insumo-estoque - ME</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, AQUISIÇÃO DE BENS OU INSUMOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG14" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG14" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 270.000,00<br><b>JUROS:</b>
+                        Variável<br><b>PRAZO:</b> Até 36 meses<br><b>CARÊNCIA:</b> Até 3 meses<br><b>REQUISITOS:</b>
+                        Fidejussória (aval ou fiança) e Fundo de Liquidez representado por duplicatas, cheques e outros
+                        recebíveis, além de aplicação financeira no BNB ou garantia hipotecária.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Apoiar a produção industrial e agroindustrial e as
+                        atividades turística, comercial e de prestação de serviços da Região mediante o financiamento da
+                        aquisição isolada do que se segue:
+
+                        Matérias-primas e insumos utilizados no processo produtivo de indústrias e agroindústrias;
+                        Mercadorias, inclusive máquinas, veículos utilitários, aeronaves, embarcações ou equipamentos,
+                        destinados à constituição de estoques de empresas comerciantes desses bens;
+                        Insumos utilizados por empresas turísticas;
+                        Insumos utilizados por empresas de prestação de serviços ou empresas do setor de infra
+                        estrutura.<br><b>PÚBLICO:</b> Empresas industriais, agroindustriais, turísticas, comerciais e de
+                        prestação de serviços que se enquadrem no público-alvo dos programas de crédito.
+                        <br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/giro-insumo-estoque">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 15-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">CAPITAL DE GIRO - Giro insumo-estoque</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, AQUISIÇÃO DE BENS OU INSUMOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG15" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG15" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> R$ 2.300.000,00<br><b>JUROS:</b>
+                        Variável<br><b>PRAZO:</b> Até 36 meses<br><b>CARÊNCIA:</b> Até 3 meses<br><b>REQUISITOS:</b>
+                        Fidejussória (aval ou fiança) e Fundo de Liquidez representado por duplicatas, cheques e outros
+                        recebíveis, além de aplicação financeira no BNB ou garantia hipotecária.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Apoiar a produção industrial e agroindustrial e as
+                        atividades turística, comercial e de prestação de serviços da Região mediante o financiamento da
+                        aquisição isolada do que se segue:
+
+                        Matérias-primas e insumos utilizados no processo produtivo de indústrias e agroindústrias;
+                        Mercadorias, inclusive máquinas, veículos utilitários, aeronaves, embarcações ou equipamentos,
+                        destinados à constituição de estoques de empresas comerciantes desses bens;
+                        Insumos utilizados por empresas turísticas;
+                        Insumos utilizados por empresas de prestação de serviços ou empresas do setor de infra
+                        estrutura.<br><b>PÚBLICO:</b> Empresas industriais, agroindustriais, turísticas, comerciais e de
+                        prestação de serviços que se enquadrem no público-alvo dos programas de crédito.
+                        <br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/empresa/emprestimos/giro-insumo-estoque">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 16-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">Empréstimos MPE - FNE MPE</td>
+            <td class="dg_obj mein">IMPLANTAÇÃO, EXPANSÃO, MODERNIZAÇÃO, RELOCALIZAÇÃO, AQUISIÇÃO DE BENS OU INSUMOS
+            </td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG16" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG16" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>Empréstimos MPE</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> A partir de 0,4% ao
+                        mês<br><b>PRAZO:</b> Até 12 anos<br><b>CARÊNCIA:</b> Até 4 anos<br><b>REQUISITOS:</b> Garantias:
+                        hipoteca; alienação fiduciária, fiança ou aval, conforme análise<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> O Programa financia a implantação, expansão,
+                        modernização e relocalização das empresas, aquisição de máquinas, equipamentos e veículos
+                        utilitários; aquisição de imóvel sede da empresa.<br><b>PÚBLICO:</b> Micro e pequenas empresas
+                        (faturamento anual até
+                        R$ 4,8 mi)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/mpe">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 17-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">Empréstimos MPE - FNE Sol para empresas e produtores rurais</td>
+            <td class="dg_obj mein">ENERGIA RENOVÁVEL</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG17" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG17" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>Empréstimos MPE</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até 100%<br><b>JUROS:</b> De acordo com Setor e
+                        Legislação<br><b>PRAZO:</b> Até 12 anos<br><b>CARÊNCIA:</b> até 6 meses<br><b>REQUISITOS:</b> As
+                        garantias serão, cumulativa ou alternativamente:
+
+                        Hipoteca;
+                        Alienação fiduciária;
+                        Fiança ou aval.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Todos os componentes dos sistemas de micro e
+                        minigeração de energia elétrica fotovoltaica, eólica, de biomassa ou pequenas centrais
+                        hidroelétricas (PCH), bem como sua instalação.<br><b>PÚBLICO:</b> Todos os portes de empresas
+                        industriais, agroindustriais, comerciais e de prestação de serviços, produtores rurais e
+                        empresas rurais, cooperativas de produtores rurais e associações legalmente constituídas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bnb.gov.br/fne-sol/empresas-e-produtores-rurais">Visitar site da linha de
+                          crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o banco<br>0800 728
+                            3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 18-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">Empréstimos MPE - FNE Água</td>
+            <td class="dg_obj mein">PROJETOS DE INOVAÇÃO OU USO SUSTENTÁVEL DE RECURSOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG18" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG18" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>Empréstimos MPE</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até 100%<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Até 20 anos<br><b>CARÊNCIA:</b> Até 8 anos<br><b>REQUISITOS:</b> Consultar banco para maiores
+                        informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Financia projetos para o uso eficiente e
+                        sustentável de água<br><b>PÚBLICO:</b> Empresas de todos os portes e setores, produtores rurais,
+                        agricultores familiares, cooperativas e associações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/fne-agua">Visitar site da
+                          linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 19-->
+          <tr>
+            <td>BANCO DO NORDESTE</td>
+            <td class="mein">Empréstimos MPE - FNE Inovação - ME</td>
+            <td class="dg_obj mein">PROJETOS DE INOVAÇÃO OU USO SUSTENTÁVEL DE RECURSOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG19" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG19" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>Empréstimos MPE</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até 100%<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Até 15 anos<br><b>CARÊNCIA:</b> Até 5 anos<br><b>REQUISITOS:</b> As garantias serão, cumulativa
+                        ou alternativamente:
+
+                        Hipoteca;
+                        Alienação fiduciária;
+                        Penhor;
+                        Fiança ou aval.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Projetos de Inovação<br><b>PÚBLICO:</b> MEI (Linha
+                        FNE - Startup);
+                        Empresas de todos os portes que realizem atividades produtivas;
+                        Produtores rurais;
+                        Cooperativas agropecuárias;
+                        Associações de produtores rurais.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="https://www.bnb.gov.br/fne-inovacao">Visitar site da
+                          linha de crédito</a><br><B><a href="tel:0800 728 3030" class="dg_tel">Ligar para o
+                            banco<br>0800 728 3030</a></B><BR><img class="dg_img"
+                          src="https://i1.wp.com/www.dsvc.com.br/wp-content/uploads/2012/05/Logo-BNB.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 20-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">CAPITAL DE GIRO - BB Giro Digital</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG20" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG20" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Até 24 meses<br><b>CARÊNCIA:</b> Até 3 meses<br><b>REQUISITOS:</b> Pode-se usar como garantia,
+                        além da fiança ou aval, os recebíveis da empresa, como duplicatas, cheques, agenda de cartões,
+                        bem como veículos, imóveis, entre outras possibilidades.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Crédito para reforçar o capital de giro da sua
+                        empresa<br><b>PÚBLICO:</b> Empresas que faturam até R$ 1 milhão ao ano e que precisam de uma
+                        solução simples, prática e segura para as necessidades do dia a dia<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/obter-capital-de-giro/bb-giro-digital#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 21-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">CAPITAL DE GIRO - BB Giro Empresa</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, AQUISIÇÃO DE BENS OU INSUMOS, PAGAMENTO DE FORNECEDORES</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG21" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG21" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Até 36 meses<br><b>CARÊNCIA:</b> Até 3 meses<br><b>REQUISITOS:</b> Garantias, como: fiança ou
+                        aval, os recebíveis da empresa, como duplicatas, cheques, agenda de cartões, bem como veículos,
+                        imóveis, entre outras possibilidades<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Linha de capital de giro para atender as
+                        necessidades de caixa da sua empresa
+                        O crédito pode ser utilizado para compra de estoque, pagamento de fornecedores e também para
+                        aproveitar as oportunidades de negócios<br><b>PÚBLICO:</b> Empresas que faturam a partir de R$ 1
+                        milhão, com necessidade de condições flexíveis para pagamento de suas obrigações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/obter-capital-de-giro/bb-giro-empresa#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 22-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">CAPITAL DE GIRO - Giro MPE Tributos</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG22" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG22" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Até 12 meses<br><b>CARÊNCIA:</b> Até 59 dias<br><b>REQUISITOS:</b> Tarifa de Abertura de Crédito
+                        - TAC: flexibilização de até 100%.
+                        Garantias: fiança ou aval, os recebíveis da empresa, como duplicatas, cheques, agenda de
+                        cartões, bem como veículos, imóveis, entre outras possibilidades.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Crédito para apoiar as necessidades de início de
+                        ano da sua empresa<br><b>PÚBLICO:</b> MPE<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/obter-capital-de-giro/giro-mpe-tributos#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 23-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">CAPITAL DE GIRO - Outras alternativas para capital de giro BB - FORNECEDORES</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, PAGAMENTO DE FORNECEDORES, SALÁRIOS, IMPOSTOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG23" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG23" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CAPITAL DE GIRO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Variável<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b> Consultar banco para maiores
+                        informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Pagamento a fornecedores, salários e impostos ou
+                        equilibrar fluxo de caixa<br><b>PÚBLICO:</b> Todas as empresas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/obter-capital-de-giro#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 24-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">FINANCIAR INVESTIMENTO - Financiamento PJ</td>
+            <td class="dg_obj mein">AQUISIÇÃO DE BENS OU INSUMOS, ENERGIA RENOVÁVEL</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG24" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG24" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>FINANCIAR INVESTIMENTO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até 90%<br><b>JUROS:</b> Depende do
+                        caso<br><b>PRAZO:</b> Até 180 meses<br><b>CARÊNCIA:</b> Até 12 meses<br><b>REQUISITOS:</b>
+                        Garantias: analisadas caso a caso;
+
+                        Sujeito à aprovação cadastral e de crédito.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Financiar a aquisição isolada de bens de capital
+                        novos, de fabricação nacional ou nacionalizados, conforme segue.
+                        - Máquinas e equipamentos (inclusive os de informática).
+                        - Veículos: de passeio, utilitários, camionetas, de transporte e de cargas.
+                        - Aeronaves e embarcações.
+                        - Móveis e utensílios.
+                        - Equipamentos para geração de energia renovável (economia verde)<br><b>PÚBLICO:</b> Pessoas
+                        jurídicas (exceto para atividades rurais)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/financiar-um-investimento/bb-financiamento-pj#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 25-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">FINANCIAR INVESTIMENTO - Proger Urbano Empresarial</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, MODERNIZAÇÃO, AQUISIÇÃO DE BENS OU INSUMOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG25" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG25" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>FINANCIAR INVESTIMENTO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até 80%<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> Até
+                        72 meses<br><b>CARÊNCIA:</b> Até 12 meses<br><b>REQUISITOS:</b> Os projetos de investimento
+                        devem proporcionar geração ou manutenção de emprego e renda<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Crédito para reformar suas instalações, modernizar
+                        sua empresa ou adquirir máquinas, equipamentos e veículos automotores
+
+                        Além do valor do financiamento é possível incluir crédito para incrementar o fluxo de caixa.
+                        Tudo em uma única operação<br><b>PÚBLICO:</b> Disponível para empresas que faturam até R$ 10
+                        milhões por ano<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/financiar-um-investimento/proger-urbano-empresarial#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 26-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">FINANCIAR INVESTIMENTO - BB Crédito Imobiliário - Financiamento à Produção PJ</td>
+            <td class="dg_obj mein">CONSTRUÇÃO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG26" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG26" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>FINANCIAR INVESTIMENTO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> Variável<br><b>PRAZO:</b>
+                        Variável<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b> Consultar banco para maiores
+                        informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Financiamento para sua empresa construir
+                        empreendimentos imobiliários residenciais e/ou comerciais, localizados em área urbana destinados
+                        a comercialização<br><b>PÚBLICO:</b> CONSULTAR BANCO PARA DETALHES<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/financiar-um-investimento/plano-empresario#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 27-->
+          <tr>
+            <td>BANCO DO BRASIL</td>
+            <td class="mein">FINANCIAR INVESTIMENTO - Microcrédito Produtivo Orientado</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO, AQUISIÇÃO DE BENS OU INSUMOS</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG27" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG27" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>FINANCIAR INVESTIMENTO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> Variável<br><b>PRAZO:</b> 5
+                        a 18 meses<br><b>CARÊNCIA:</b> Variável<br><b>REQUISITOS:</b> Ser correntista do Banco do
+                        Brasil. Não correntista pode contratar por meio da parceira Movera.
+
+                        Ser Empreendedor Informal com renda mensal de até R$ 30 mil.
+
+                        Ser microempreendedor individual (MEI);
+
+                        Ser microempresa.
+
+                        Apresentar garantia pessoal de terceiros (em alguns casos ela pode ser dispensada).
+
+                        O endividamento no Sistema Financeiro Nacional (SFN) não pode exceder R$ 80 mil, excetuando-se
+                        desse limite as operações de crédito habitacional.<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Crédito com orientação para realizar investimentos
+                        no seu empreendimento. <br><b>PÚBLICO:</b> MEI e ME, com faturamento anual de até R$ 120 mil<br>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://www.bb.com.br/pbb/pagina-inicial/empresas/produtos-e-servicos/credito/financiar-um-investimento/microcredito-produtivo-orientado#/">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img" src="assets/images/bb.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 28-->
+          <tr>
+            <td>CAIXA ECONÔMICA FEDERAL</td>
+            <td class="mein">CUSTEIO - Linha de crédito CAIXA e SEBRAE - MEI</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG28" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG28" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CUSTEIO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até R$ 12.500,00<br><b>JUROS:</b> 1,59%
+                        a.m.<br><b>PRAZO:</b> Variável<br><b>CARÊNCIA:</b> Até 9 meses<br><b>REQUISITOS:</b>
+                        Empreendimento ter pelo menos 12 meses de faturamento e nenhuma restrição nem de CPF nem de CNPJ
+                        Garantias complementares poderão ser concedidas pelo Sebrae por meio do Fundo de Aval às Micro e
+                        Pequenas Empresas (Fampe)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> financiamento de capital de
+                        giro<br><b>PÚBLICO:</b> Empreendimentos dos setores de indústria (inclusive agroindustriais),
+                        comércio e serviços, dos seguintes portes: Microempreendedores individuais (MEI), Microempresas
+                        e Empresas de pequeno porte<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://meuatendimento.sebrae.com.br/sites/PortalSebrae/login?urlcallback=MCxodHRwczovL2JpdC5seS8yS2gyT3BU&lbOrigem=EAD_NA">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img"
+                          src="https://logodownload.org/wp-content/uploads/2014/02/caixa-logo-5.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 29-->
+          <tr>
+            <td>CAIXA ECONÔMICA FEDERAL</td>
+            <td class="mein">CUSTEIO - Linha de crédito CAIXA e SEBRAE - ME</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG29" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG29" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CUSTEIO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até R$ 75.000,00<br><b>JUROS:</b> 1,39%
+                        a.m.<br><b>PRAZO:</b> Variável<br><b>CARÊNCIA:</b> Até 12 meses<br><b>REQUISITOS:</b>
+                        Empreendimento ter pelo menos 12 meses de faturamento e nenhuma restrição nem de CPF nem de CNPJ
+                        Garantias complementares poderão ser concedidas pelo Sebrae por meio do Fundo de Aval às Micro e
+                        Pequenas Empresas (Fampe)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> financiamento de capital de
+                        giro<br><b>PÚBLICO:</b> Empreendimentos dos setores de indústria (inclusive agroindustriais),
+                        comércio e serviços, dos seguintes portes: Microempreendedores individuais (MEI), Microempresas
+                        e Empresas de pequeno porte<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://meuatendimento.sebrae.com.br/sites/PortalSebrae/login?urlcallback=MCxodHRwczovL2JpdC5seS8yS2gyT3BU&lbOrigem=EAD_NA">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img"
+                          src="https://logodownload.org/wp-content/uploads/2014/02/caixa-logo-5.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 30-->
+          <tr>
+            <td>CAIXA ECONÔMICA FEDERAL</td>
+            <td class="mein">CUSTEIO - Linha de crédito CAIXA e SEBRAE - EPP</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG30" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG30" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CUSTEIO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até R$ 125.000,00<br><b>JUROS:</b> 1,19%
+                        a.m.<br><b>PRAZO:</b> Variável<br><b>CARÊNCIA:</b> Até 12 meses<br><b>REQUISITOS:</b>
+                        Empreendimento ter pelo menos 12 meses de faturamento e nenhuma restrição nem de CPF nem de CNPJ
+                        Garantias complementares poderão ser concedidas pelo Sebrae por meio do Fundo de Aval às Micro e
+                        Pequenas Empresas (Fampe)<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> financiamento de capital de
+                        giro<br><b>PÚBLICO:</b> Empreendimentos dos setores de indústria (inclusive agroindustriais),
+                        comércio e serviços, dos seguintes portes: Microempreendedores individuais (MEI), Microempresas
+                        e Empresas de pequeno porte<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="https://meuatendimento.sebrae.com.br/sites/PortalSebrae/login?urlcallback=MCxodHRwczovL2JpdC5seS8yS2gyT3BU&lbOrigem=EAD_NA">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:0" class="dg_tel">Ligar para o banco<br>Não
+                            Informado</a></B><BR><img class="dg_img"
+                          src="https://logodownload.org/wp-content/uploads/2014/02/caixa-logo-5.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 31-->
+          <tr>
+            <td>CAIXA ECONÔMICA FEDERAL</td>
+            <td class="mein">CUSTEIO - AÇÕES ESPECIAIS VAREJO PJ - COVID 19</td>
+            <td class="dg_obj mein">CAPITAL DE GIRO</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG31" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG31" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>CUSTEIO</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Até R$ 2.000.000,00<br><b>JUROS:</b>
+                        Variável<br><b>PRAZO:</b> 24 a 120 meses<br><b>CARÊNCIA:</b> Até 90 dias<br><b>REQUISITOS:</b>
+                        Contratos adimplentes<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Capital de Giro<br><b>PÚBLICO:</b> Micro e
+                        Pequenas Empresas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link" href="www.caixa.gov.br/caixacomvoce">Visitar site da linha
+                          de crédito</a><br><B><a href="tel:0800 726 8068" class="dg_tel">Ligar para o banco<br>0800 726
+                            8068</a></B><BR><img class="dg_img"
+                          src="https://logodownload.org/wp-content/uploads/2014/02/caixa-logo-5.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 32-->
+          <tr>
+            <td>FINEP</td>
+            <td class="mein">INOVAÇÃO E PESQUISA - Crédito para Reconversão Industrial</td>
+            <td class="dg_obj mein">ADEQUAÇÃO FABRIL, PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE E/OU COVID-19</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG32" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG32" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>INOVAÇÃO E PESQUISA</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> TJLP + 0,5%
+                        a.a.<br><b>PRAZO:</b> Variável<br><b>CARÊNCIA:</b> Até 24 meses<br><b>REQUISITOS:</b> Consultar
+                        banco para maiores informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Apoiar transformação de fábricas para a produção
+                        de itens necessários ao combate à doença, usando o conhecimento acumulado de engenharia,
+                        capacidade de produção industrial e ativos ociosos da empresa.<br><b>PÚBLICO:</b> Empresas de
+                        todos os portes<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="http://www.finep.gov.br/apoio-e-financiamento-externa/como-obter-financiamento">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:(21) 2555-0330" class="dg_tel">Ligar para o
+                            banco<br>(21) 2555-0330</a></B><BR><img class="dg_img"
+                          src="https://files.cercomp.ufg.br/weby/up/522/o/finep.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 33-->
+          <tr>
+            <td>FINEP</td>
+            <td class="mein">INOVAÇÃO E PESQUISA - Crédito para Desenvolvimento e escalonamento de
+              dispositivos médicos</td>
+            <td class="dg_obj mein">PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE E/OU COVID-19</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG33" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG33" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>INOVAÇÃO E PESQUISA</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> TJLP + 0,5%
+                        a.a.<br><b>PRAZO:</b> Até 144 meses<br><b>CARÊNCIA:</b> Até 48 meses<br><b>REQUISITOS:</b>
+                        Consultar banco para maiores informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Financiar iniciativas que busquem desenvolver,
+                        otimizar e escalonar dispositivos de atenção à saúde utilizados em UTIs como forma de aumentar a
+                        oferta nacional desses produtos. Serão inovações no nível da própria empresa e, em alguns casos,
+                        a nível nacional.<br><b>PÚBLICO:</b> Empresas de todos os portes<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="http://www.finep.gov.br/apoio-e-financiamento-externa/como-obter-financiamento">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:(21) 2555-0330" class="dg_tel">Ligar para o
+                            banco<br>(21) 2555-0330</a></B><BR><img class="dg_img"
+                          src="https://files.cercomp.ufg.br/weby/up/522/o/finep.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+          <!-- LINHA 34-->
+          <tr>
+            <td>FINEP</td>
+            <td class="mein">INOVAÇÃO E PESQUISA - FINEP Aquisição Inovadora Saúde</td>
+            <td class="dg_obj mein">PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE E/OU COVID-19</td>
+            <TD class="tabela_dg">
+              <div class="card tabela_dg3">
+                <div class="card-header tabela_dg3" id="headingOne">
+                  <h5 class="mb-0"><button class="btn tabela_dg2" onclick="collapseAll(); topFunction()"
+                      data-toggle="collapse" data-target="#CollapseDG34" aria-expanded="true"
+                      aria-controls="ColapseOne">EXIBIR DETALHES</button></h5>
+                </div>
+            </td>
+          </tr>
+          <TR style="border-top: none; border-bottom: none;">
+            <TD colspan="4" style="border-top: none; border-bottom: none;">
+              <div id="CollapseDG34" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"><BR>
+                <div class="card-header card_logo">
+                  <h4>INOVAÇÃO E PESQUISA</h4>
+                </div>
+                <div class="card-group">
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>LIMITE:</b> Variável<br><b>JUROS:</b> TJLP + 0,4%
+                        a.a.<br><b>PRAZO:</b> Até 120 meses<br><b>CARÊNCIA:</b> Até 24 meses<br><b>REQUISITOS:</b>
+                        Consultar banco para maiores informações<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:46%;">
+                    <div class="card-body text-center dg_pad">
+                      <p class="card-text dg_just"><b>FINALIDADE:</b> Financiar aquisição de dispositivos essenciais
+                        para as instituições de saúde no combate ao COVID-19 por meio da promoção da capacidade
+                        inovadora do Complexo Industrial da Saúde, notadamente estimulando a demanda de produtos
+                        desenvolvidos por PMEs inovadoras Financiar aquisição de dispositivos essenciais para as
+                        instituições de saúde no combate ao COVID-19 por meio da promoção da capacidade inovadora do
+                        Complexo Industrial da Saúde, notadamente estimulando a demanda de produtos desenvolvidos por
+                        PMEs inovadoras.<br><b>PÚBLICO:</b> Empresas de todos os portes, especialmente hospitais
+                        privados e Santas Casas<br></p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning mein" style="width:27%;">
+                    <div class="card-body text-center mein">
+                      <p class="card-text"><a class="dg_link"
+                          href="http://www.finep.gov.br/apoio-e-financiamento-externa/como-obter-financiamento">Visitar
+                          site da linha de crédito</a><br><B><a href="tel:(21) 2555-0330" class="dg_tel">Ligar para o
+                            banco<br>(21) 2555-0330</a></B><BR><img class="dg_img"
+                          src="https://files.cercomp.ufg.br/weby/up/522/o/finep.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TD>
+            <TD class="phantom"></TD>
+            <TD class="phantom">CAPITAL DE GIRO,ESTOQUE,DESPESAS DIVERSAS,PROJETOS OU ATIVIDADES RELACIONADAS À SAÚDE
+              E/OU COVID-19,AQUISIÇÃO DE BENS OU INSUMOS,REFORMA,INFRAESTRUTURA,CAPACITAÇÃO,ANTECIPAÇÃO DE
+              RECURSOS,EXPANSÃO,RELOCALIZAÇÃO,IMPLANTAÇÃO,MODERNIZAÇÃO,ENERGIA RENOVÁVEL,PROJETOS DE INOVAÇÃO OU USO
+              SUSTENTÁVEL DE RECURSOS,PAGAMENTO DE FORNECEDORES,SALÁRIOS,IMPOSTOS,CONSTRUÇÃO,ADEQUAÇÃO FABRIL</TD>
+          </TR>
+        </table>
+        <BR>
+        <BR>
+      </div>
+    </div>    <section class="AcessoRapido">
+      <div class="wrapper">
+        <div class="row">
+          <h4>Acesso Rápido</h4>
+          <nav class="MenuAcessos">
+            <div class="acesso-rapido">
+              <ul id="menu-acesso-rapido-footer" class="menu">
+                <li id="menu-item-870"
+                  class="portal menu-item menu-item-type-custom menu-item-object-custom menu-item-870"><a
+                    href="https://cearatransparente.ce.gov.br" target="_blank"><i
+                      class="PortalTransparencia"></i>Ceará<br> Transparente</a></li>
+                <li id="menu-item-871"
+                  class="acesso menu-item menu-item-type-custom menu-item-object-custom menu-item-871"><a
+                    href="http://cartadeservicos.ce.gov.br/" target="_blank"><i class="AcessoCidadao"></i>Carta de
+                    Serviços<br>do Cidadão</a></li>
+                <li id="menu-item-872"
+                  class="lei menu-item menu-item-type-custom menu-item-object-custom menu-item-872"><a
+                    href="https://cearatransparente.ce.gov.br/portal-da-transparencia/acesso-a-informacao?locale=pt-BR"
+                    target="_blank"><i class="AcessoInformacao"></i>Lei geral de<br> acesso à
+                    informação</a></li>
+                <li id="menu-item-873"
+                  class="diario menu-item menu-item-type-custom menu-item-object-custom menu-item-873"><a
+                    href="http://pesquisa.doe.seplag.ce.gov.br/" target="_blank"><i class="DiarioOficial"></i>Diário<br>
+                    Oficial</a></li>
+                <li id="menu-item-874"
+                  class="legislacao menu-item menu-item-type-custom menu-item-object-custom menu-item-874">
+                  <a href="https://www.al.ce.gov.br/" target="_blank"><i class="Legislacao"></i>Legislação<br>
+                    Estadual</a></li>
+                <li id="menu-item-61919"
+                  class="acoes menu-item menu-item-type-post_type menu-item-object-page menu-item-61919">
+                  <a href="http://www.ceara.gov.br/governo/"><i class="AcoesGoverno"></i>Ações de<br>
+                    Governo</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wrapper">
+        <div class="row Infos" style="border-top:none;">
+
+          <div class="dt-2 NomeSite">
+            <a class="link-gov" href="http://WWW.ADECE.CE.GOV.BR">
+              <h2>ADECE.CE.GOV.BR</h2>
+            </a>
+          </div>
+
+          <div class="dt-10 Direitos">
+            <div>
+              <div class="textwidget">
+                <div class="box">
+                  <h2>Sede da Adece</h2>
+                  <p>
+                    Av. Dom Luís, 807 7º andar Etevaldo Nogueira Business - Meireles<br>
+                    Fortaleza, CE<br>
+                    CEP: 60160-230
+                  </p>
+                </div>
+                <div class="box">
+                  <h2>Horário de Atendimento</h2>
+                  <p>08 às 17 horas</p>
+                  <p>(85) 3457-3300</p>
+                  <p>adece@adece.ce.gov.br</p>
+                </div>
+                <div class="box">
+                  <h2 class="canais">Nossos canais</h2>
+                  <div class="redes">
+                    <ul class="menu">
+                      <li class="facebook redesLinkRodape">
+                        <a href="https://facebook.com/adececeara/" style="overflow: hidden;"
+                          target="_blank">Facebook</a>
+                      </li>
+                      <li class="instagram redesLinkRodape">
+                        <a href="https://instagram.com/adececeara/" style="overflow: hidden;"
+                          target="_blank">Instagram</a>
+                      </li>
+                      <li class="twitter redesLinkRodape">
+                        <a href="https://www.linkedin.com/company/adececeara" style="overflow: hidden;"
+                          target="_blank">Twitter</a>
+                      </li>
+                      <li class="youtube redesLinkRodape">
+                        <a href="https://www.youtube.com/channel/UCKHORAzihw4hjxSbTsW-4cQ" style="overflow: hidden;"
+                          target="_blank">Youtube</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="box copyright">
+                  <p>
+                    © 2017 - 2020 – governo do estado do ceará<br>
+                    todos os direitos reservados
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+
+    $(function () {
+      $('#search').on('input', function () {
+        searchRow();
+      });
+    })
+
+    function searchRow() {
+      var $rows = $('#table > tbody > tr').not(".header");
+      var val1 = $.trim($('#search').val()).replace(/ +/g, ' ').toLowerCase();
+      var val2 = $.trim($("#deviceSelector").text()).replace(/\s+/g, ' ').toLowerCase();
+      val2 = (val2 === "todas as opções disponíveis") ? "" : val2;
+
+      $rows.show().filter(function () {
+        var text1 = $(this).find('td:nth-child(3)').text().replace(/\s+/g, ' ').toLowerCase();
+        var text2 = $(this).find('td:nth-child(3)').text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text1.indexOf(val1) || !~text2.indexOf(val2);
+      }).hide();
+    }
+
+    function searchTableDevice(device) {
+      var filter, table, tr, td, i;
+
+      $("#deviceSelector").html(device);
+
+      if (device == "todos") {
+        $("#deviceSelector").html("TODAS AS OPÇÕES DISPONÍVEIS");
+      }
+
+      searchRow();
+    }
+    function collapseAll() {
+      $(".collapse").collapse("hide");
+    }
+  </script>
+</html>
